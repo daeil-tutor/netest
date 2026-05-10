@@ -1,0 +1,1 @@
+- [RecommendItem QA 결과](recommenditem-qa-results.md) — lineHeight 토큰 오류, shadow 하드코딩, test 파일 누락

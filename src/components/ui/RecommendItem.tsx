@@ -35,7 +35,7 @@ export function RecommendItem({
         width: "153px",
         height: "324px",
         cursor: onClick ? "pointer" : "default",
-        boxShadow: isHover ? "0 0 6px rgba(0, 0, 0, 0.1)" : "none",
+        boxShadow: isHover ? "var(--shadow-xs)" : "none",
         transition: "box-shadow 0.2s ease-in-out",
       }}
       onClick={onClick}
@@ -112,7 +112,7 @@ export function RecommendItem({
             fontSize: "var(--font-size-14)",
             fontFamily: "var(--font-family-pretendard)",
             fontWeight: 700,
-            lineHeight: "var(--font-size-16)",
+            lineHeight: "var(--line-height-16)",
             color: "var(--color-text-primary)",
             wordBreak: "break-word",
           }}
