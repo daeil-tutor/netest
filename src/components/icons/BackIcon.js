@@ -1,15 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import iconSvg from "/images/back.svg";
 export function BackIcon(_a) {
-  var _b = _a.size,
-    size = _b === void 0 ? 24 : _b,
-    className = _a.className;
-  return _jsx("img", {
-    src: iconSvg,
-    alt: "back",
-    width: size,
-    height: size,
-    className: className,
-    "data-node-id": "6:1186",
-  });
+    var _b = _a.size, size = _b === void 0 ? 24 : _b, className = _a.className, _c = _a.color, color = _c === void 0 ? "var(--color-grey-700)" : _c;
+    return (_jsx("svg", { width: size, height: size, style: { display: "block" }, viewBox: "0 0 11.775 20", fill: "none", xmlns: "http://www.w3.org/2000/svg", className: className, "data-node-id": "6:1189", children: _jsx("path", { id: "arrow_back_ios_new", d: "M10 20L0 10L10 0L11.775 1.775L3.55 10L11.775 18.225L10 20Z", fill: color }) }));
 }

@@ -1,8 +1,9 @@
 export interface IconProps {
-  size?: number;
-  className?: string;
+    size?: number;
+    className?: string;
 }
-export declare function LocationIcon({
-  size,
-  className,
-}: IconProps): import("react/jsx-runtime").JSX.Element;
+interface LocationIconProps extends IconProps {
+    color?: string;
+}
+export declare function LocationIcon({ size, className, color, }: LocationIconProps): import("react/jsx-runtime").JSX.Element;
+export {};

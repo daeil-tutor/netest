@@ -1,5 +1,6 @@
 import type { IconProps } from "./LocationIcon";
-export declare function BackIcon({
-  size,
-  className,
-}: IconProps): import("react/jsx-runtime").JSX.Element;
+interface BackIconProps extends IconProps {
+    color?: string;
+}
+export declare function BackIcon({ size, className, color, }: BackIconProps): import("react/jsx-runtime").JSX.Element;
+export {};

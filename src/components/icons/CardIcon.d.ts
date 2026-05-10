@@ -1,5 +1,6 @@
 import type { IconProps } from "./LocationIcon";
-export declare function CardIcon({
-  size,
-  className,
-}: IconProps): import("react/jsx-runtime").JSX.Element;
+interface CardIconProps extends IconProps {
+    color?: string;
+}
+export declare function CardIcon({ size, className, color, }: CardIconProps): import("react/jsx-runtime").JSX.Element;
+export {};
