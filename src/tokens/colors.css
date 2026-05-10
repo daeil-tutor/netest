@@ -1,19 +1,146 @@
-:root {
-  --primitive-white: #ffffff;
-  --primitive-gray-50: #f9fafb;
-  --primitive-gray-200: #e5e7eb;
-  --primitive-gray-500: #6b7280;
-  --primitive-gray-900: #111827;
-  --primitive-blue-500: #3b82f6;
-  --primitive-green-500: #22c55e;
-  --primitive-red-500: #ef4444;
+/* ═══════════════════════════════════════════════════════════
+   Design System Colors - 디자인 시스템 색상
 
-  --color-bg-primary: var(--primitive-white);
-  --color-bg-secondary: var(--primitive-gray-50);
-  --color-text-primary: var(--primitive-gray-900);
-  --color-text-secondary: var(--primitive-gray-500);
-  --color-border-default: var(--primitive-gray-200);
-  --color-brand-primary: var(--primitive-blue-500);
-  --color-status-success: var(--primitive-green-500);
-  --color-status-error: var(--primitive-red-500);
+   Generated from Figma design system variables
+   Figma: https://figma.com/design/7IeRNVQ483UAQJJmgBIozv/
+
+   Structure: Primitive Colors → Semantic Colors
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ─────────────────────────────────────────────────────────
+     PRIMARY COLORS - Primitive
+     ───────────────────────────────────────────────────────── */
+  --color-primary-900: #01326b;
+  --color-primary-800: #01418c;
+  --color-primary-700: #0154b5;
+  --color-primary-600: #026ce8;
+  --color-primary-500: #0277ff;
+  --color-primary-400: #3592ff;
+  --color-primary-300: #55a4ff;
+  --color-primary-200: #8bc0ff;
+  --color-primary-100: #b1d5ff;
+  --color-primary-50: #e6f1ff;
+
+  /* ─────────────────────────────────────────────────────────
+     SEMANTIC COLORS - Brand
+     ───────────────────────────────────────────────────────── */
+  --color-brand-primary: var(--color-primary-600);
+  --color-brand-secondary: var(--color-primary-400);
+
+  /* ─────────────────────────────────────────────────────────
+     YELLOW COLORS - Primitive (Accent)
+     ───────────────────────────────────────────────────────── */
+  --color-yellow-900: #643310;
+  --color-yellow-800: #824315;
+  --color-yellow-700: #a8571c;
+  --color-yellow-600: #d86f23;
+  --color-yellow-500: #ed7a27;
+  --color-yellow-400: #f19552;
+  --color-yellow-300: #f3a66e;
+  --color-yellow-200: #f7c29c;
+  --color-yellow-100: #f9d6bc;
+  --color-yellow-50: #fdf2e9;
+
+  /* ─────────────────────────────────────────────────────────
+     BLUE COLORS - Primitive (Teal/Cyan)
+     ───────────────────────────────────────────────────────── */
+  --color-blue-900: #005c59;
+  --color-blue-800: #007874;
+  --color-blue-700: #009b96;
+  --color-blue-600: #00c7c0;
+  --color-blue-500: #00dbd3;
+  --color-blue-400: #33e2dc;
+  --color-blue-300: #54e7e2;
+  --color-blue-200: #8aeeeb;
+  --color-blue-100: #b0f4f1;
+  --color-blue-50: #e6fbfb;
+
+  /* ─────────────────────────────────────────────────────────
+     GREEN COLORS - Primitive (Success)
+     ───────────────────────────────────────────────────────── */
+  --color-green-900: #125a34;
+  --color-green-800: #187644;
+  --color-green-700: #1f9958;
+  --color-green-600: #28c471;
+  --color-green-500: #2cd77c;
+  --color-green-400: #56df96;
+  --color-green-300: #72e4a7;
+  --color-green-200: #9eedc3;
+  --color-green-100: #bef3d6;
+  --color-green-50: #eafbf2;
+
+  /* ─────────────────────────────────────────────────────────
+     SEMANTIC COLORS - Status
+     ───────────────────────────────────────────────────────── */
+  --color-status-success: var(--color-green-600);
+  --color-status-success-light: var(--color-green-50);
+  --color-status-warning: var(--color-yellow-500);
+  --color-status-warning-light: var(--color-yellow-50);
+  --color-status-error: var(--color-red-500);
+  --color-status-error-light: var(--color-red-50);
+
+  /* ─────────────────────────────────────────────────────────
+     GREY COLORS - Primitive (Neutral)
+     ───────────────────────────────────────────────────────── */
+  --color-grey-900: #1a1a1a;
+  --color-grey-800: #333333;
+  --color-grey-700: #505050;
+  --color-grey-600: #666666;
+  --color-grey-500: #888888;
+  --color-grey-400: #999999;
+  --color-grey-300: #bbbbbb;
+  --color-grey-200: #dddddd;
+  --color-grey-100: #f2f2f2;
+  --color-grey-50: #f9f9f9;
+
+  /* ─────────────────────────────────────────────────────────
+     SEMANTIC COLORS - Grey scale
+     ───────────────────────────────────────────────────────── */
+  --color-text-primary: var(--color-grey-900);
+  --color-text-secondary: var(--color-grey-600);
+  --color-text-tertiary: var(--color-grey-500);
+  --color-bg-primary: var(--color-white-100);
+  --color-bg-secondary: var(--color-grey-50);
+  --color-bg-tertiary: var(--color-grey-100);
+  --color-border-primary: var(--color-grey-300);
+  --color-border-secondary: var(--color-grey-200);
+  --color-border-light: var(--color-grey-100);
+
+  /* ─────────────────────────────────────────────────────────
+     WHITE COLORS - Primitive (with opacity variants)
+     ───────────────────────────────────────────────────────── */
+  --color-white-100: #ffffff;
+  --color-white-90: #ffffffe5;
+  --color-white-80: #ffffffcc;
+  --color-white-70: #ffffffb2;
+  --color-white-60: #ffffff99;
+  --color-white-50: #ffffff80;
+  --color-white-40: #ffffff66;
+  --color-white-30: #ffffff4d;
+  --color-white-20: #ffffff33;
+  --color-white-10: #ffffff1a;
+
+  /* ─────────────────────────────────────────────────────────
+     BLACK COLORS - Primitive (with opacity variants)
+     ───────────────────────────────────────────────────────── */
+  --color-black-100: #000000;
+  --color-black-90: #000000e5;
+  --color-black-80: #000000cc;
+  --color-black-70: #000000b2;
+  --color-black-60: #00000099;
+  --color-black-50: #00000080;
+  --color-black-40: #00000066;
+  --color-black-30: #0000004d;
+  --color-black-20: #00000033;
+  --color-black-10: #0000001a;
+
+  /* ─────────────────────────────────────────────────────────
+     SEMANTIC COLORS - Overlay & Interaction
+     ───────────────────────────────────────────────────────── */
+  --color-overlay-dark: rgba(0, 0, 0, 0.4);
+  --color-overlay-light: rgba(0, 0, 0, 0.1);
+  --color-interactive-hover: var(--color-primary-700);
+  --color-interactive-active: var(--color-primary-900);
+  --color-interactive-disabled: var(--color-grey-300);
 }

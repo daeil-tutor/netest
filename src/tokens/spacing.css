@@ -1,23 +1,175 @@
+/* ═══════════════════════════════════════════════════════════
+   Design System Spacing, Radius & Effects
+
+   Generated from Figma design system variables
+   Figma: https://figma.com/design/7IeRNVQ483UAQJJmgBIozv/
+
+   Includes: Spacing, Border Radius, Typography, Shadows
+   ═══════════════════════════════════════════════════════════ */
+
 :root {
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 12px;
-  --spacing-lg: 16px;
+  /* ─────────────────────────────────────────────────────────
+     SPACING TOKENS - Primitive
+     ───────────────────────────────────────────────────────── */
+  --spacing-none: 0;
+  --spacing-xxs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
   --spacing-xl: 24px;
   --spacing-2xl: 32px;
+  --spacing-3xl: 40px;
 
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  /* ─────────────────────────────────────────────────────────
+     BORDER RADIUS TOKENS
+     ───────────────────────────────────────────────────────── */
+  --radius-none: 0;
+  --radius-xxs: 2px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+
+  /* Semantic radius aliases */
   --radius-full: 9999px;
+  --radius-default: var(--radius-sm);
+  --radius-large: var(--radius-lg);
 
-  --font-family-sans: "Inter", sans-serif;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
+  /* ─────────────────────────────────────────────────────────
+     FONT FAMILY
+     ───────────────────────────────────────────────────────── */
+  --font-family-pretendard:
+    "pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", sans-serif;
+
+  /* ─────────────────────────────────────────────────────────
+     FONT SIZE - Primitive
+     ───────────────────────────────────────────────────────── */
+  --font-size-10: 10px;
+  --font-size-11: 11px;
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-24: 24px;
+  --font-size-28: 28px;
+
+  /* Semantic size aliases */
+  --font-size-xs: var(--font-size-12);
+  --font-size-sm: var(--font-size-14);
+  --font-size-base: var(--font-size-16);
+  --font-size-lg: var(--font-size-18);
+  --font-size-xl: var(--font-size-24);
+  --font-size-2xl: var(--font-size-28);
+
+  /* ─────────────────────────────────────────────────────────
+     FONT WEIGHT
+     ───────────────────────────────────────────────────────── */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Semantic aliases */
+  --font-weight-normal: var(--font-weight-regular);
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
 
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  /* ─────────────────────────────────────────────────────────
+     LINE HEIGHT - Primitive
+     ───────────────────────────────────────────────────────── */
+  --line-height-14: 14px;
+  --line-height-16: 16px;
+  --line-height-18: 18px;
+  --line-height-20: 20px;
+  --line-height-28: 28px;
+  --line-height-32: 32px;
+
+  /* ─────────────────────────────────────────────────────────
+     TYPOGRAPHY - Composite (Component-ready)
+     ───────────────────────────────────────────────────────── */
+
+  /* Headline styles */
+  --type-h1-font-size: var(--font-size-28);
+  --type-h1-font-weight: var(--font-weight-bold);
+  --type-h1-line-height: var(--line-height-32);
+  --type-h1: var(--font-weight-bold) var(--font-size-28) / var(--line-height-32)
+    var(--font-family-pretendard);
+
+  --type-h2-font-size: var(--font-size-24);
+  --type-h2-font-weight: var(--font-weight-bold);
+  --type-h2-line-height: var(--line-height-28);
+  --type-h2: var(--font-weight-bold) var(--font-size-24) / var(--line-height-28)
+    var(--font-family-pretendard);
+
+  /* Subtitle styles */
+  --type-s1-font-size: var(--font-size-18);
+  --type-s1-font-weight: var(--font-weight-bold);
+  --type-s1-line-height: var(--line-height-20);
+  --type-s1: var(--font-weight-bold) var(--font-size-18) / var(--line-height-20)
+    var(--font-family-pretendard);
+
+  --type-s2-font-size: var(--font-size-16);
+  --type-s2-font-weight: var(--font-weight-bold);
+  --type-s2-line-height: var(--line-height-20);
+  --type-s2: var(--font-weight-bold) var(--font-size-16) / var(--line-height-20)
+    var(--font-family-pretendard);
+
+  /* Body styles */
+  --type-b1-font-size: var(--font-size-15);
+  --type-b1-font-weight: var(--font-weight-bold);
+  --type-b1-line-height: var(--line-height-18);
+  --type-b1: var(--font-weight-bold) var(--font-size-15) / var(--line-height-18)
+    var(--font-family-pretendard);
+
+  --type-b2-font-size: var(--font-size-14);
+  --type-b2-font-weight: var(--font-weight-regular);
+  --type-b2-line-height: var(--line-height-16);
+  --type-b2: var(--font-weight-regular) var(--font-size-14) /
+    var(--line-height-16) var(--font-family-pretendard);
+
+  --type-b3-font-size: var(--font-size-14);
+  --type-b3-font-weight: var(--font-weight-bold);
+  --type-b3-line-height: var(--line-height-16);
+  --type-b3: var(--font-weight-bold) var(--font-size-14) / var(--line-height-16)
+    var(--font-family-pretendard);
+
+  --type-b4-font-size: var(--font-size-13);
+  --type-b4-font-weight: var(--font-weight-bold);
+  --type-b4-line-height: var(--line-height-16);
+  --type-b4: var(--font-weight-bold) var(--font-size-13) / var(--line-height-16)
+    var(--font-family-pretendard);
+
+  --type-b5-font-size: var(--font-size-12);
+  --type-b5-font-weight: var(--font-weight-regular);
+  --type-b5-line-height: var(--line-height-14);
+  --type-b5: var(--font-weight-regular) var(--font-size-12) /
+    var(--line-height-14) var(--font-family-pretendard);
+
+  /* Caption styles */
+  --type-c1-font-size: var(--font-size-11);
+  --type-c1-font-weight: var(--font-weight-regular);
+  --type-c1-line-height: var(--line-height-16);
+  --type-c1-letter-spacing: -0.3px;
+  --type-c1: var(--font-weight-regular) var(--font-size-11) /
+    var(--line-height-16) var(--font-family-pretendard);
+
+  --type-c2-font-size: var(--font-size-10);
+  --type-c2-font-weight: var(--font-weight-regular);
+  --type-c2-line-height: var(--line-height-16);
+  --type-c2-letter-spacing: -0.3px;
+  --type-c2: var(--font-weight-regular) var(--font-size-10) /
+    var(--line-height-16) var(--font-family-pretendard);
+
+  /* ─────────────────────────────────────────────────────────
+     SHADOW / EFFECTS
+     ───────────────────────────────────────────────────────── */
+  --shadow-sm: 0 0 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* Semantic shadow aliases */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-xl: var(--shadow-lg);
+  --shadow-2xl: 0 20px 25px rgba(0, 0, 0, 0.15);
 }
