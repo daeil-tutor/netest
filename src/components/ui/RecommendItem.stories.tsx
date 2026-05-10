@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
 import { RecommendItem } from "./RecommendItem";
+import itemThumbnail1 from "../../images/item-thumbnail-image-1.png";
 
 const meta = {
   title: "Components/RecommendItem",
@@ -31,6 +32,7 @@ export const PickDefault: Story = {
     status: "default",
     gameName: "Game name",
     badgeType: "pick",
+    imageUrl: itemThumbnail1,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -44,6 +46,7 @@ export const PickHover: Story = {
     status: "hover",
     gameName: "Game name",
     badgeType: "pick",
+    imageUrl: itemThumbnail1,
   },
 };
 
@@ -52,6 +55,7 @@ export const RecommendDefault: Story = {
     status: "default",
     gameName: "Game name",
     badgeType: "recommend",
+    imageUrl: itemThumbnail1,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -64,6 +68,7 @@ export const RecommendHover: Story = {
     status: "hover",
     gameName: "Game name",
     badgeType: "recommend",
+    imageUrl: itemThumbnail1,
   },
 };
 
@@ -72,6 +77,7 @@ export const WithLongName: Story = {
     status: "default",
     gameName: "Very Long Game Name Here",
     badgeType: "pick",
+    imageUrl: itemThumbnail1,
   },
 };
 
@@ -80,6 +86,7 @@ export const WithClick: Story = {
     status: "default",
     gameName: "Game name",
     badgeType: "pick",
+    imageUrl: itemThumbnail1,
     onClick: () => alert("Recommend item clicked!"),
   },
 };

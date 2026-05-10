@@ -1,5 +1,5 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import logoSvg from "/images/logo.svg";
+import logoImage from "../../images/logo.png";
 export function Logo(_a) {
   var className = _a.className,
     _b = _a.alt,
@@ -9,7 +9,7 @@ export function Logo(_a) {
     _d = _a.height,
     height = _d === void 0 ? 23 : _d;
   return _jsx("img", {
-    src: logoSvg,
+    src: logoImage,
     alt: alt,
     width: width,
     height: height,

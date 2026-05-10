@@ -1,4 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Divider } from "./Divider";
 var DEFAULT_TOP_LINKS = [
   { label: "이용약관" },
   { label: "개인정보처리방침" },
@@ -27,15 +28,6 @@ var DEFAULT_COMPANY_INFO = {
   businessNumber: "220-87-17483호",
   noticeNumber: "제2013-경기성남-1659호",
 };
-function VerticalDivider() {
-  return _jsx("div", {
-    style: {
-      width: "1px",
-      height: "12px",
-      backgroundColor: "rgba(255,255,255,0.2)",
-    },
-  });
-}
 export function Footer(_a) {
   var className = _a.className,
     _b = _a.topLinks,
@@ -89,7 +81,8 @@ export function Footer(_a) {
                   },
                   children: link.label,
                 }),
-                index < topLinks.length - 1 && _jsx(VerticalDivider, {}),
+                index < topLinks.length - 1 &&
+                  _jsx(Divider, { variant: "vertical" }),
               ],
             },
             "top-".concat(index),
@@ -127,7 +120,8 @@ export function Footer(_a) {
                   },
                   children: link.label,
                 }),
-                index < bottomLinks.length - 1 && _jsx(VerticalDivider, {}),
+                index < bottomLinks.length - 1 &&
+                  _jsx(Divider, { variant: "vertical" }),
               ],
             },
             "bottom-".concat(index),

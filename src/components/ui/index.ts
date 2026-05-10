@@ -24,3 +24,18 @@ export type { GameFilterProps } from "./GameFilter";
 
 export { SwiperPagination } from "./SwiperPagination";
 export type { SwiperPaginationProps } from "./SwiperPagination";
+
+export { Badge } from "./Badge";
+export type { BadgeProps } from "./Badge";
+
+export { Divider } from "./Divider";
+export type { DividerProps } from "./Divider";
+
+export { Link } from "./Link";
+export type { LinkProps } from "./Link";
+
+export { Image } from "./Image";
+export type { ImageProps } from "./Image";
+
+export { CardImage } from "./CardImage";
+export type { CardImageProps } from "./CardImage";

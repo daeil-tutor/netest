@@ -1,4 +1,4 @@
-import logoSvg from "/images/logo.svg";
+import logoImage from "../../images/logo.png";
 
 export interface LogoProps {
   className?: string;
@@ -15,7 +15,7 @@ export function Logo({
 }: LogoProps) {
   return (
     <img
-      src={logoSvg}
+      src={logoImage}
       alt={alt}
       width={width}
       height={height}

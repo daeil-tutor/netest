@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Divider } from "./Divider";
 
 export interface FooterLink {
   label: string;
@@ -53,18 +54,6 @@ const DEFAULT_COMPANY_INFO = {
   noticeNumber: "제2013-경기성남-1659호",
 };
 
-function VerticalDivider() {
-  return (
-    <div
-      style={{
-        width: "1px",
-        height: "12px",
-        backgroundColor: "rgba(255,255,255,0.2)",
-      }}
-    />
-  );
-}
-
 export function Footer({
   className,
   topLinks = DEFAULT_TOP_LINKS,
@@ -117,7 +106,7 @@ export function Footer({
             >
               {link.label}
             </a>
-            {index < topLinks.length - 1 && <VerticalDivider />}
+            {index < topLinks.length - 1 && <Divider variant="vertical" />}
           </div>
         ))}
       </div>
@@ -155,7 +144,7 @@ export function Footer({
             >
               {link.label}
             </a>
-            {index < bottomLinks.length - 1 && <VerticalDivider />}
+            {index < bottomLinks.length - 1 && <Divider variant="vertical" />}
           </div>
         ))}
       </div>

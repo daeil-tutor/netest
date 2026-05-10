@@ -1,5 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { DesktopIcon, MobileIcon } from "../icons";
+import { CardImage } from "./CardImage";
 export function CardItem(_a) {
   var className = _a.className,
     _b = _a.style,
@@ -45,14 +46,12 @@ export function CardItem(_a) {
           flexShrink: 0,
           position: "relative",
         },
-        children: _jsx("img", {
+        children: _jsx(CardImage, {
           src: imageUrl,
           alt: gameName,
           style: {
             width: isHover ? "330px" : "100%",
             height: isHover ? "220px" : "100%",
-            objectFit: "cover",
-            display: "block",
             position: "absolute",
             left: isHover ? "-15px" : "0",
             top: isHover ? "-10px" : "0",

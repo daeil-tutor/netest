@@ -1,1 +1,2 @@
 - [RecommendItem QA 결과](recommenditem-qa-results.md) — lineHeight 토큰 오류, shadow 하드코딩, test 파일 누락
+- [전체 QA 상태 (2026-05-10)](current-qa-status.md) — 14개 컴포넌트 검사, 빌드 통과, 토큰 1건 위반, 스토리 1개 누락, 테스트 전무

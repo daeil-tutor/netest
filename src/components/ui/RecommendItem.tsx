@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Image } from "./Image";
 
 export interface RecommendItemProps {
   className?: string;
@@ -51,14 +52,12 @@ export function RecommendItem({
           position: "relative",
         }}
       >
-        <img
+        <Image
           src={imageUrl}
           alt={gameName}
           style={{
             width: isHover ? "168.3px" : "100%",
             height: isHover ? "211.2px" : "100%",
-            objectFit: "cover",
-            display: "block",
             position: "absolute" as const,
             left: isHover ? "-7.65px" : "0",
             top: isHover ? "-9.6px" : "0",

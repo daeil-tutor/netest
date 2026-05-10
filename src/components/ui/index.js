@@ -7,3 +7,8 @@ export { RecommendItem } from "./RecommendItem";
 export { SearchBar } from "./SearchBar";
 export { GameFilter } from "./GameFilter";
 export { SwiperPagination } from "./SwiperPagination";
+export { Badge } from "./Badge";
+export { Divider } from "./Divider";
+export { Link } from "./Link";
+export { Image } from "./Image";
+export { CardImage } from "./CardImage";

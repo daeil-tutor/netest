@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { DesktopIcon, MobileIcon } from "../icons";
+import { CardImage } from "./CardImage";
 
 export interface CardItemProps {
   className?: string;
@@ -56,14 +57,12 @@ export function CardItem({
           position: "relative",
         }}
       >
-        <img
+        <CardImage
           src={imageUrl}
           alt={gameName}
           style={{
             width: isHover ? "330px" : "100%",
             height: isHover ? "220px" : "100%",
-            objectFit: "cover",
-            display: "block",
             position: "absolute",
             left: isHover ? "-15px" : "0",
             top: isHover ? "-10px" : "0",

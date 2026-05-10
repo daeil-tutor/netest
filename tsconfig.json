@@ -26,6 +26,7 @@
     }
   },
   "include": ["src", ".storybook"],
+  "exclude": ["**/*.figma.ts"],
   "references": [
     {
       "path": "./tsconfig.app.json"

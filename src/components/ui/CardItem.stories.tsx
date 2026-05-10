@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { expect, within } from "@storybook/test";
 import { CardItem } from "./CardItem";
+import cardThumbnail1 from "../../images/card-thumbnail-image-1.png";
 
 const meta = {
   title: "Components/CardItem",
@@ -32,6 +33,7 @@ export const VerticalDefault: Story = {
     state: "default",
     gameName: "Game Name",
     gameCategory: "Action RPG",
+    imageUrl: cardThumbnail1,
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
@@ -46,6 +48,7 @@ export const VerticalHover: Story = {
     state: "hover",
     gameName: "Game Name",
     gameCategory: "Action RPG",
+    imageUrl: cardThumbnail1,
   },
 };
 
@@ -55,6 +58,7 @@ export const HorizontalDefault: Story = {
     state: "default",
     gameName: "Game Name",
     gameCategory: "Action RPG",
+    imageUrl: cardThumbnail1,
   },
 };
 
@@ -64,6 +68,7 @@ export const HorizontalHover: Story = {
     state: "hover",
     gameName: "Game Name",
     gameCategory: "Action RPG",
+    imageUrl: cardThumbnail1,
   },
 };
 
@@ -73,6 +78,7 @@ export const WithoutBadge: Story = {
     gameName: "Game Name",
     gameCategory: "Action RPG",
     showUpdate: false,
+    imageUrl: cardThumbnail1,
   },
 };
 
@@ -81,6 +87,7 @@ export const WithClick: Story = {
     style: "vertical",
     gameName: "Game Name",
     gameCategory: "Action RPG",
+    imageUrl: cardThumbnail1,
     onClick: () => alert("Card clicked!"),
   },
 };

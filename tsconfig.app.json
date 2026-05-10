@@ -9,6 +9,7 @@
     "jsx": "react-jsx"
   },
   "include": ["src"],
+  "exclude": ["**/*.figma.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"

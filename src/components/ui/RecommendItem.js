@@ -1,4 +1,5 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Image } from "./Image";
 export function RecommendItem(_a) {
   var className = _a.className,
     _b = _a.status,
@@ -40,14 +41,12 @@ export function RecommendItem(_a) {
           flexShrink: 0,
           position: "relative",
         },
-        children: _jsx("img", {
+        children: _jsx(Image, {
           src: imageUrl,
           alt: gameName,
           style: {
             width: isHover ? "168.3px" : "100%",
             height: isHover ? "211.2px" : "100%",
-            objectFit: "cover",
-            display: "block",
             position: "absolute",
             left: isHover ? "-7.65px" : "0",
             top: isHover ? "-9.6px" : "0",
