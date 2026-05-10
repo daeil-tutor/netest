@@ -12,6 +12,7 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@storybook/react-vite": "^8.6.18",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

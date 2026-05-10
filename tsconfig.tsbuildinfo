@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/stories/tokens/colors.stories.tsx","./src/stories/tokens/spacing.stories.tsx","./src/stories/tokens/typography.stories.tsx"],"version":"5.9.3"}
