@@ -1,15 +1,23 @@
 import { jsx as _jsx } from "react/jsx-runtime";
-import iconSvg from "/images/desktop.svg";
 export function DesktopIcon(_a) {
   var _b = _a.size,
     size = _b === void 0 ? 24 : _b,
-    className = _a.className;
-  return _jsx("img", {
-    src: iconSvg,
-    alt: "desktop",
+    className = _a.className,
+    _c = _a.color,
+    color = _c === void 0 ? "var(--color-grey-300)" : _c;
+  return _jsx("svg", {
     width: size,
     height: size,
+    style: { display: "block" },
+    viewBox: "0 0 20 18",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
     className: className,
     "data-node-id": "6:1184",
+    children: _jsx("path", {
+      id: "desktop_mac",
+      d: "M6 18V17L8 15H2C1.45 15 0.979167 14.8042 0.5875 14.4125C0.195833 14.0208 0 13.55 0 13V2C0 1.45 0.195833 0.979167 0.5875 0.5875C0.979167 0.195833 1.45 0 2 0H18C18.55 0 19.0208 0.195833 19.4125 0.5875C19.8042 0.979167 20 1.45 20 2V13C20 13.55 19.8042 14.0208 19.4125 14.4125C19.0208 14.8042 18.55 15 18 15H12L14 17V18H6ZM2 10H18V2H2V10Z",
+      fill: color,
+    }),
   });
 }

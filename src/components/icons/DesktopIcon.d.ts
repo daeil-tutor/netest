@@ -1,5 +1,10 @@
 import type { IconProps } from "./LocationIcon";
+interface DesktopIconProps extends IconProps {
+  color?: string;
+}
 export declare function DesktopIcon({
   size,
   className,
-}: IconProps): import("react/jsx-runtime").JSX.Element;
+  color,
+}: DesktopIconProps): import("react/jsx-runtime").JSX.Element;
+export {};

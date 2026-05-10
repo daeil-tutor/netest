@@ -38,9 +38,10 @@ export function CardItem({
         flexDirection: isVertical ? "column" : "row",
         alignItems: isVertical ? "flex-start" : "center",
         cursor: onClick ? "pointer" : "default",
-        opacity: isHover ? 0.8 : 1,
-        transition: "opacity 0.2s ease-in-out",
+        boxShadow: isHover ? "0px 0px 6px rgba(0,0,0,0.1)" : "none",
+        transition: "box-shadow 0.2s ease-in-out",
         width: isVertical ? "300px" : "600px",
+        position: "relative",
       }}
       onClick={onClick}
       data-node-id={isVertical ? "9:563" : "9:630"}
@@ -52,16 +53,22 @@ export function CardItem({
           width: isVertical ? "100%" : "300px",
           height: "200px",
           flexShrink: 0,
+          position: "relative",
         }}
       >
         <img
           src={imageUrl}
           alt={gameName}
           style={{
-            width: "100%",
-            height: "100%",
+            width: isHover ? "330px" : "100%",
+            height: isHover ? "220px" : "100%",
             objectFit: "cover",
             display: "block",
+            position: "absolute",
+            left: isHover ? "-15px" : "0",
+            top: isHover ? "-10px" : "0",
+            transition:
+              "width 0.2s ease-in-out, height 0.2s ease-in-out, left 0.2s ease-in-out, top 0.2s ease-in-out",
           }}
         />
       </div>
@@ -74,8 +81,12 @@ export function CardItem({
           gap: "var(--spacing-lg)",
           padding: "var(--spacing-lg)",
           width: isVertical ? "100%" : "300px",
-          flex: isVertical ? undefined : "1 0 0",
+          height: isVertical ? "auto" : "100%",
           justifyContent: isVertical ? "flex-start" : "center",
+          flexShrink: 0,
+          position: "relative",
+          zIndex: 1,
+          boxSizing: "border-box",
         }}
       >
         {/* Game Title */}
@@ -84,6 +95,7 @@ export function CardItem({
             display: "flex",
             flexDirection: "column",
             gap: "var(--spacing-xs)",
+            width: "98px",
           }}
         >
           <div
@@ -118,6 +130,7 @@ export function CardItem({
             alignItems: "center",
             justifyContent: "space-between",
             width: "100%",
+            flexShrink: 0,
           }}
         >
           {/* Update Badge */}
@@ -131,6 +144,7 @@ export function CardItem({
                 alignItems: "center",
                 justifyContent: "center",
                 height: "20px",
+                flexShrink: 0,
               }}
             >
               <span
@@ -158,10 +172,31 @@ export function CardItem({
               alignItems: "center",
               justifyContent: "flex-end",
               flex: "1 0 0",
+              minWidth: "1px",
             }}
           >
-            {showDesktopIcon && <DesktopIcon size={24} />}
-            {showMobileIcon && <MobileIcon size={24} />}
+            {showDesktopIcon && (
+              <div
+                style={{
+                  overflow: "hidden",
+                  width: "24px",
+                  height: "24px",
+                }}
+              >
+                <DesktopIcon size={24} />
+              </div>
+            )}
+            {showMobileIcon && (
+              <div
+                style={{
+                  overflow: "hidden",
+                  width: "24px",
+                  height: "24px",
+                }}
+              >
+                <MobileIcon size={24} />
+              </div>
+            )}
           </div>
         </div>
       </div>

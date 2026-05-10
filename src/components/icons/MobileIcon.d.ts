@@ -1,5 +1,10 @@
 import type { IconProps } from "./LocationIcon";
+interface MobileIconProps extends IconProps {
+  color?: string;
+}
 export declare function MobileIcon({
   size,
   className,
-}: IconProps): import("react/jsx-runtime").JSX.Element;
+  color,
+}: MobileIconProps): import("react/jsx-runtime").JSX.Element;
+export {};
