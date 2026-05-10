@@ -27,12 +27,12 @@ export function SearchBar({
         alignItems: "center",
         width: "300px",
         padding: "0 var(--spacing-xxs)",
-        borderBottom: "1px solid var(--color-border-primary)",
+        ...(isFocus
+          ? { border: "2px solid var(--color-primary-500)" }
+          : { borderBottom: "1px solid var(--color-border-primary)" }),
         borderRadius: "var(--radius-xxs)",
-        backgroundColor: isFocus
-          ? "var(--color-bg-secondary)"
-          : "var(--color-background-white)",
-        transition: "background-color 0.2s ease-in-out",
+        backgroundColor: "var(--color-background-white)",
+        transition: "border 0.2s ease-in-out",
       }}
       data-node-id="9:1639"
     >
