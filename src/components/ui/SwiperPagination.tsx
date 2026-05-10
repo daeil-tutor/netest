@@ -21,8 +21,8 @@ export function SwiperPagination({
       onClick={onClick}
       style={{
         backgroundColor: isActive
-          ? "rgba(255, 255, 255, 0.2)"
-          : "rgba(255, 255, 255, 0.1)",
+          ? "var(--color-background-pagination-active)"
+          : "var(--color-background-pagination-default)",
         padding: "var(--spacing-md)",
         borderRadius: "var(--radius-xs)",
         display: "flex",
