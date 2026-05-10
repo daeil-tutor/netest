@@ -143,4 +143,20 @@
   --color-interactive-hover: var(--color-primary-700);
   --color-interactive-active: var(--color-primary-900);
   --color-interactive-disabled: var(--color-grey-300);
+
+  /* ─────────────────────────────────────────────────────────
+     SEMANTIC COLORS - Background
+     ───────────────────────────────────────────────────────── */
+  --color-background-white: var(--color-white-100);
+  --color-background-footer: #333333;
+  --color-background-primary-btn: var(--color-grey-900);
+  --color-background-update: var(--color-green-600);
+  --color-background-pick: var(--color-yellow-500);
+
+  /* ─────────────────────────────────────────────────────────
+     SEMANTIC COLORS - Text
+     ───────────────────────────────────────────────────────── */
+  --color-text-inverse: var(--color-white-100);
+  --color-text-footer-link: rgba(255, 255, 255, 0.6);
+  --color-text-footer-caption: rgba(255, 255, 255, 0.5);
 }

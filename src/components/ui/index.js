@@ -1,0 +1,9 @@
+export { Button } from "./Button";
+export { Logo } from "./Logo";
+export { GnbBar } from "./GnbBar";
+export { Footer } from "./Footer";
+export { CardItem } from "./CardItem";
+export { RecommendItem } from "./RecommendItem";
+export { SearchBar } from "./SearchBar";
+export { GameFilter } from "./GameFilter";
+export { SwiperPagination } from "./SwiperPagination";
