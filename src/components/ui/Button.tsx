@@ -31,53 +31,53 @@ const sizeStyles = {
 const styleVariants = {
   primary: {
     default: {
-      backgroundColor: "var(--color-brand-primary)",
+      backgroundColor: "var(--color-grey-900)",
       color: "var(--color-text-inverse)",
       border: "none",
     },
     hover: {
-      backgroundColor: "var(--color-primary-700)",
+      backgroundColor: "var(--color-primary-500)",
       color: "var(--color-text-inverse)",
       border: "none",
     },
     press: {
-      backgroundColor: "var(--color-primary-800)",
+      backgroundColor: "var(--color-primary-700)",
       color: "var(--color-text-inverse)",
       border: "none",
     },
   },
   secondary: {
     default: {
-      backgroundColor: "var(--color-primary-100)",
-      color: "var(--color-brand-primary)",
+      backgroundColor: "var(--color-grey-700)",
+      color: "var(--color-text-inverse)",
       border: "none",
     },
     hover: {
-      backgroundColor: "var(--color-primary-200)",
-      color: "var(--color-brand-primary)",
+      backgroundColor: "var(--color-primary-500)",
+      color: "var(--color-text-inverse)",
       border: "none",
     },
     press: {
-      backgroundColor: "var(--color-primary-300)",
-      color: "var(--color-brand-primary)",
+      backgroundColor: "var(--color-primary-700)",
+      color: "var(--color-text-inverse)",
       border: "none",
     },
   },
   outline: {
     default: {
       backgroundColor: "transparent",
-      color: "var(--color-brand-primary)",
-      border: "1px solid var(--color-brand-primary)",
+      color: "var(--color-grey-900)",
+      border: "2px solid var(--color-grey-900)",
     },
     hover: {
-      backgroundColor: "var(--color-primary-50)",
-      color: "var(--color-brand-primary)",
-      border: "1px solid var(--color-brand-primary)",
+      backgroundColor: "var(--color-primary-500)",
+      color: "var(--color-text-inverse)",
+      border: "2px solid var(--color-primary-500)",
     },
     press: {
-      backgroundColor: "var(--color-primary-100)",
-      color: "var(--color-brand-primary)",
-      border: "1px solid var(--color-brand-primary)",
+      backgroundColor: "var(--color-primary-700)",
+      color: "var(--color-text-inverse)",
+      border: "2px solid var(--color-primary-700)",
     },
   },
 };
@@ -93,6 +93,8 @@ export function Button({
 }: ButtonProps) {
   const sizeStyle = sizeStyles[size];
   const stateStyle = styleVariants[style][state];
+  const borderRadius =
+    style === "outline" ? "var(--radius-full)" : "var(--radius-none)";
 
   return (
     <button
@@ -105,7 +107,7 @@ export function Button({
         fontFamily: "var(--font-family-pretendard)",
         fontWeight: 700,
         lineHeight: "var(--font-size-20)",
-        borderRadius: "var(--radius-default)",
+        borderRadius,
         cursor: disabled ? "not-allowed" : "pointer",
         opacity: disabled ? 0.5 : 1,
         display: "flex",

@@ -1,20 +1,20 @@
 import type { StoryObj } from "@storybook/react";
 import { GameFilter } from "./GameFilter";
 declare const meta: {
-    title: string;
-    component: typeof GameFilter;
-    parameters: {
-        design: {
-            url: string;
-        };
+  title: string;
+  component: typeof GameFilter;
+  parameters: {
+    design: {
+      url: string;
     };
-    tags: string[];
-    argTypes: {
-        state: {
-            control: "select";
-            options: string[];
-        };
+  };
+  tags: string[];
+  argTypes: {
+    state: {
+      control: "select";
+      options: string[];
     };
+  };
 };
 export default meta;
 type Story = StoryObj<typeof meta>;

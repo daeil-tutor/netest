@@ -2,12 +2,15 @@
   "color": {
     "primitive": {
       "white": { "value": "#ffffff", "type": "color" },
-      "black": { "value": "#000000", "type": "color" },
+      "black": { "value": "#1a1a1a", "type": "color" },
       "gray-50": { "value": "#f9fafb", "type": "color" },
       "gray-200": { "value": "#e5e7eb", "type": "color" },
       "gray-500": { "value": "#6b7280", "type": "color" },
+      "gray-700": { "value": "#505050", "type": "color" },
       "gray-900": { "value": "#111827", "type": "color" },
       "blue-500": { "value": "#3b82f6", "type": "color" },
+      "blue-700": { "value": "#0277ff", "type": "color" },
+      "blue-800": { "value": "#0154b5", "type": "color" },
       "green-500": { "value": "#22c55e", "type": "color" },
       "red-500": { "value": "#ef4444", "type": "color" }
     },
@@ -17,13 +20,30 @@
     },
     "text": {
       "primary": { "value": "{color.primitive.gray-900}", "type": "color" },
-      "secondary": { "value": "{color.primitive.gray-500}", "type": "color" }
+      "secondary": { "value": "{color.primitive.gray-500}", "type": "color" },
+      "inverse": { "value": "{color.primitive.white}", "type": "color" }
     },
     "border": {
-      "default": { "value": "{color.primitive.gray-200}", "type": "color" }
+      "default": { "value": "{color.primitive.gray-200}", "type": "color" },
+      "primary": { "value": "{color.primitive.black}", "type": "color" }
     },
     "brand": {
-      "primary": { "value": "{color.primitive.blue-500}", "type": "color" }
+      "primary": { "value": "{color.primitive.black}", "type": "color" }
+    },
+    "button": {
+      "primary": {
+        "default": { "value": "{color.primitive.black}", "type": "color" },
+        "hover": { "value": "{color.primitive.blue-700}", "type": "color" },
+        "press": { "value": "{color.primitive.blue-800}", "type": "color" }
+      },
+      "secondary": {
+        "default": { "value": "{color.primitive.gray-700}", "type": "color" },
+        "hover": { "value": "{color.primitive.blue-700}", "type": "color" },
+        "press": { "value": "{color.primitive.blue-800}", "type": "color" }
+      },
+      "outline": {
+        "border": { "value": "{color.primitive.black}", "type": "color" }
+      }
     },
     "status": {
       "success": { "value": "{color.primitive.green-500}", "type": "color" },
