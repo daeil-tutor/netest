@@ -21,8 +21,8 @@ export function RecommendItem({
   const badgeBackgroundColor =
     badgeType === "pick"
       ? "var(--color-background-pick)"
-      : "var(--color-background-update)";
-  const badgeText = badgeType === "pick" ? "Pick" : "Recommend";
+      : "var(--color-background-recommend)";
+  const badgeText = badgeType === "pick" ? "Pick" : "추천";
 
   return (
     <div
@@ -35,8 +35,8 @@ export function RecommendItem({
         width: "153px",
         height: "324px",
         cursor: onClick ? "pointer" : "default",
-        opacity: isHover ? 0.8 : 1,
-        transition: "opacity 0.2s ease-in-out",
+        boxShadow: isHover ? "0 0 6px rgba(0, 0, 0, 0.1)" : "none",
+        transition: "box-shadow 0.2s ease-in-out",
       }}
       onClick={onClick}
       data-node-id="8:112"
@@ -48,16 +48,21 @@ export function RecommendItem({
           width: "100%",
           height: "192px",
           flexShrink: 0,
+          position: "relative",
         }}
       >
         <img
           src={imageUrl}
           alt={gameName}
           style={{
-            width: "100%",
-            height: "100%",
+            width: isHover ? "168.3px" : "100%",
+            height: isHover ? "211.2px" : "100%",
             objectFit: "cover",
             display: "block",
+            position: "absolute" as const,
+            left: isHover ? "-7.65px" : "0",
+            top: isHover ? "-9.6px" : "0",
+            transition: "all 0.2s ease-in-out",
           }}
         />
       </div>
@@ -78,12 +83,11 @@ export function RecommendItem({
           style={{
             backgroundColor: badgeBackgroundColor,
             padding: "0 var(--spacing-xs)",
-            borderRadius: "var(--radius-full)",
+            borderRadius: "20px",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             width: "32px",
-            height: "20px",
           }}
         >
           <span
@@ -91,7 +95,7 @@ export function RecommendItem({
               fontSize: "var(--font-size-10)",
               fontFamily: "var(--font-family-pretendard)",
               fontWeight: 400,
-              lineHeight: "var(--font-size-16)",
+              lineHeight: "var(--line-height-16)",
               color: "var(--color-text-inverse)",
               textAlign: "center",
               letterSpacing: "-0.3px",

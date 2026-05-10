@@ -55,7 +55,7 @@ export const RecommendDefault: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByText("Recommend")).toBeInTheDocument();
+    expect(canvas.getByText("추천")).toBeInTheDocument();
   },
 };
 

@@ -196,7 +196,7 @@ export var RecommendDefault = {
       var canvasElement = _b.canvasElement;
       return __generator(this, function (_c) {
         canvas = within(canvasElement);
-        expect(canvas.getByText("Recommend")).toBeInTheDocument();
+        expect(canvas.getByText("추천")).toBeInTheDocument();
         return [2 /*return*/];
       });
     });
