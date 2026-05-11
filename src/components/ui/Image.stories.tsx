@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Image } from "./Image";
+import itemThumbnail1 from "../../images/item-thumbnail-image-1.png";
 
 const meta = {
   title: "UI/Image",
@@ -51,7 +52,7 @@ export const Image2: Story = {
 
 export const CustomUrl: Story = {
   args: {
-    src: "https://via.placeholder.com/300x200?text=Custom+Image",
+    src: itemThumbnail1,
     alt: "Custom image",
     width: 300,
     height: 200,

@@ -1,4 +1,5 @@
 import { Image } from "./Image";
+import itemThumbnail1 from "../../images/item-thumbnail-image-1.png";
 var meta = {
   title: "UI/Image",
   component: Image,
@@ -43,7 +44,7 @@ export var Image2 = {
 };
 export var CustomUrl = {
   args: {
-    src: "https://via.placeholder.com/300x200?text=Custom+Image",
+    src: itemThumbnail1,
     alt: "Custom image",
     width: 300,
     height: 200,

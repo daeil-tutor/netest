@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export interface ButtonProps {
-  children: ReactNode;
+  children?: ReactNode;
   size?: "lg" | "md" | "sm";
   style?: "primary" | "secondary" | "outline";
   state?: "default" | "hover" | "press";
