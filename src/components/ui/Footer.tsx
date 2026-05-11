@@ -65,6 +65,7 @@ export function Footer({
     <footer
       className={className}
       style={{
+        width: "100%",
         backgroundColor: "var(--color-background-footer)",
         padding: "var(--spacing-2xl)",
         display: "flex",
